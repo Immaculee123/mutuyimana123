@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginFormActivity"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/txtLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LOGIN FORM"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textColor="#25b3e8"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username :"
+        android:textSize="27dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/txtLogin"/>
+
+    <EditText
+        android:id="@+id/edtUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Username :"
+        android:layout_toRightOf="@+id/txtUserName"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/txtUserName"/>
+
+    <TextView
+        android:id="@+id/txtPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password :"
+        android:textSize="27dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/txtUserName"/>
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Password :"
+        android:inputType="numberPassword"
+        android:layout_toRightOf="@+id/txtPassword"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/txtPassword"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/txtPassword"
+        android:id="@+id/allButton">
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOGIN"
+            android:textSize="25dp"
+            android:onClick="loginClicked"
+            android:layout_margin="20dp" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REGISTER"
+            android:textSize="25dp"
+            android:onClick="registerClicked"
+            android:layout_toRightOf="@+id/btnLogin"
+            android:layout_alignTop="@+id/btnLogin" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/loginFeedBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:hint="login form"
+        android:textAlignment="center"
+        android:layout_below="@+id/allButton"/>
+
+</RelativeLayout>
